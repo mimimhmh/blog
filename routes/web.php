@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $name = 'John Doe';
+    return view('welcome', compact('name'));
 });

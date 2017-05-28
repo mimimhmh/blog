@@ -19,5 +19,5 @@
             crossorigin="anonymous"></script>
 
     <!-- Custom styles for this template -->
-    <link href="{{URL::asset('css/blog.css')}}" rel="stylesheet">
+    <link href="{{URL::asset('css/app.css')}}" rel="stylesheet">
 </head>

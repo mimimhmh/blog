@@ -18,6 +18,8 @@
                 @foreach($post->comments as $comment)
                     <button type="button" class="list-group-item list-group-item-action">
                         <strong>
+                            {{ auth()->user()->name }}
+                            &nbsp; at
                             {{ $comment->created_at->diffForHumans() }}: &nbsp;&nbsp;
                         </strong>
                         {{ $comment->body }}
@@ -26,6 +28,7 @@
             </div>
         </div>
 
+        @if(auth()->check())
         <div class="card">
             <div class="card-header">
                 Add a comment
@@ -44,6 +47,7 @@
                 </form>
             </div>
         </div>
+        @endif
 
         @include('layouts.errors')
 

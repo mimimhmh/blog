@@ -15,7 +15,7 @@ class RegistrationController extends Controller
 
     public function create() {
 
-        return view('sessions.create');
+        return view('sessions.register');
     }
 
     public function store() {

@@ -22,9 +22,9 @@
                 <button type="submit" class="btn btn-primary">Publish</button>
             </div>
 
-            @include('layouts.errors')
-
         </form>
+
+        @include('layouts.errors')
 
     </div><!-- /.blog-main -->
 

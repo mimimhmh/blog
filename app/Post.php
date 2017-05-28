@@ -17,4 +17,9 @@ class Post extends Model
             'body' => request('body')
         ]);
     }
+
+    public function user() {
+
+        return $this->belongsTo(User::class);
+    }
 }

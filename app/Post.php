@@ -39,4 +39,12 @@ class Post extends Model
         }
 
     }
+
+    public static function archives() {
+
+        return static::query()
+            ->selectRaw('monthname(`created_at`) as month, year(`created_at`) year, COUNT(*) ')
+            ->groupBy(['month', 'year'])
+            ->orderByRaw('min(`created_at`) DESC')->get();
+    }
 }

@@ -2,18 +2,23 @@
 
 namespace App\Providers;
 
+use App\Post;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
+
     /**
      * Bootstrap any application services.
      *
      * @return void
      */
-    public function boot()
-    {
-        //
+    public function boot() {
+
+        view()->composer('layouts.sidebar', function ($view)
+        {
+            $view->with('archives', Post::archives());
+        });
     }
 
     /**
@@ -21,8 +26,7 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
-    {
+    public function register() {
         //
     }
 }

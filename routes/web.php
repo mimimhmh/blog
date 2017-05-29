@@ -1,7 +1,5 @@
 <?php
 
-dd(resolve('App\Billing\Stripe'));
-
 Route::get('/tasks', 'TasksController@index');
 Route::get('/tasks/{task}', 'TasksController@show');
 

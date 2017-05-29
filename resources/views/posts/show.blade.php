@@ -18,7 +18,7 @@
                 @foreach($post->comments as $comment)
                     <button type="button" class="list-group-item list-group-item-action">
                         <strong>
-                            {{ auth()->user()->name }}
+                            {{ $comment->user->name }}
                             &nbsp; at
                             {{ $comment->created_at->diffForHumans() }}: &nbsp;&nbsp;
                         </strong>
@@ -27,7 +27,6 @@
                 @endforeach
             </div>
         </div>
-
         @include('posts.comment')
 
         @include('layouts.errors')
